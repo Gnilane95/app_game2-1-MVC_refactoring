@@ -6,7 +6,7 @@
             <h1 class="text-blue-500 text-5xl  text-uppercase font-black pb-10 pt-16 "><?= $game["name"] ?></h1>
             <?php
             if ($game["url_img"] != null) { ?>
-                <img src="<?= $game["url_img"] ?>" alt="<?= $game["name"] ?>" class="mx-auto pb-5">
+                <img src="<?= $game["url_img"] ?>" alt="<?= $game["name"] ?>" class="mx-auto max-w-xl pb-5">
             <?php }
             ?>
             <p class="pb-5"><?= $game["description"] ?></p>
