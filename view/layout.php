@@ -12,9 +12,6 @@
     </head>
 
     <body>
-        <div class="navbar bg-gray-100">
-            <a class="btn btn-ghost normal-case text-xl mx-24" href="index.php">App<span class=" text-blue-500">Game</span></a>
-        </div>
         <main class="px-24">
             <?= $content ?>
         </main>
