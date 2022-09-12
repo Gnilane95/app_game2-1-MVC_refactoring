@@ -1,6 +1,8 @@
 <?php
+namespace Models;
 require("database.php");
 
+use PDO;
 abstract class Model
 {
     private $pdo;
@@ -57,7 +59,7 @@ abstract class Model
         $item = $query->fetch();
 
         if (!$item) {
-            $_SESSION["error"] = "Ce jeu n'est pas disponible.";
+            $_SESSION["error"] = "Ce jeux n'est pas disponible.";
             header("location: index.php");
         }
         return $item ;
@@ -73,7 +75,7 @@ abstract class Model
         $query = $this->pdo->prepare($sql);
         $query->execute([$id]);
         //Redirect
-        $_SESSION["success"] = "Le jeu est bien supprimé.";
+        $_SESSION["success"] = "Le jeux est bien supprimé.";
         header("location:index.php");
     }
 
@@ -98,7 +100,7 @@ abstract class Model
         $query->execute();
 
         // Redirect
-        $_SESSION["success"] = "Le jeu a bien été ajouté";
+        $_SESSION["success"] = "Le jeux a bien été ajouté";
         header("Location: index.php");
         die;
         
@@ -121,7 +123,7 @@ abstract class Model
 
         $query->execute();
 
-        $_SESSION["success"] = "Le jeu a bien été modifié";
+        $_SESSION["success"] = "Le jeux a bien été modifié";
         header("Location: index.php");
     }
 }
